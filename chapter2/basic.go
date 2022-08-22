@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func variableZeroValue() {
@@ -47,6 +48,14 @@ var (
 	s = "hello"
 )
 
+func triangle() {
+	var a, b int = 3, 4
+	var c int
+	c = int(math.Sqrt(float64(a*a + b*b))) // Sqrt(x) 只吃float64,  return float64
+
+	fmt.Println(a, b, c)
+}
+
 func main() {
 	fmt.Println("Hello,World!!")
 
@@ -59,5 +68,7 @@ func main() {
 	varibleTypeDedution2()
 
 	fmt.Println(a, s)
+
+	triangle()
 
 }
