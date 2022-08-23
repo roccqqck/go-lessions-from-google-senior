@@ -40,13 +40,13 @@ func printFile(filename string) {
 
 func printFileContents(reader io.Reader) {
 	scanner := bufio.NewScanner(reader)
-	for scanner.Scan() {
+	for scanner.Scan() { // while
 		fmt.Println(scanner.Text())
 	}
 }
 
 func forever() {
-	for {
+	for { // infinite loop
 		fmt.Println("abc")
 		time.Sleep(time.Second * 3)
 	}
