@@ -2,8 +2,18 @@ package main
 
 import "fmt"
 
-func printArray(arr []int) {
+// arr [5]int 是array  只能input 5個int的array array當input會複製
+func printArray2(arr [5]int) {
 	arr[0] = 100
+	for k, v := range arr {
+		fmt.Println(k, v)
+	}
+
+}
+
+// arr []int 是 slice 可以input多個int的slice slice當input不會複製
+func printArray(arr []int) {
+	arr[0] = 101
 	for k, v := range arr {
 		fmt.Println(k, v)
 	}
@@ -45,12 +55,22 @@ func main() {
 	}
 
 	fmt.Println("------->")
+	printArray2(arr1)
+	//printArray2(arr2)
+	fmt.Println("------->")
+	printArray2(arr3)
+
+	fmt.Println("------->")
+	fmt.Println(arr1, arr3)
+
+	fmt.Println("------->")
 	printArray(arr1[:])
-	//printArray(arr2)
+	fmt.Println("------->")
+	printArray(arr2[:])
 	fmt.Println("------->")
 	printArray(arr3[:])
 
 	fmt.Println("------->")
-	fmt.Println(arr1, arr3)
+	fmt.Println(arr1, arr2, arr3)
 
 }
