@@ -13,7 +13,7 @@ func variableZeroValue() {
 	fmt.Printf("%d    %q\n", a, s)
 }
 
-func variableInitalValue() {
+func variableInitialValue() {
 	var b, c int = 11, 221
 	var s1 string = "abc" +
 		"hahhaha"
@@ -21,7 +21,7 @@ func variableInitalValue() {
 
 }
 
-func variableTypeDedution1() {
+func variableTypeDeduction1() {
 	var b, c = 11, 222
 	var s1 = "abc" +
 		"hahhaha"
@@ -31,7 +31,7 @@ func variableTypeDedution1() {
 
 }
 
-func variableTypeDedution2() {
+func variableTypeDeduction2() {
 	b, c := 11, 223
 	s1 := "abc" +
 		"hahhaha"
@@ -42,7 +42,7 @@ func variableTypeDedution2() {
 	fmt.Println(i1, i2, b1, s2)
 }
 
-// package varibles
+// package variables
 var (
 	a = 001
 	s = "hello"
@@ -61,11 +61,11 @@ func main() {
 
 	variableZeroValue()
 
-	variableInitalValue()
+	variableInitialValue()
 
-	variableTypeDedution1()
+	variableTypeDeduction1()
 
-	variableTypeDedution2()
+	variableTypeDeduction2()
 
 	fmt.Println(a, s)
 
