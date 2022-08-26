@@ -39,6 +39,7 @@ func main() {
 		fmt.Println(arr3[i])
 	}
 
+	// range
 	fmt.Println("------->")
 	for i := range arr3 {
 		fmt.Println(arr3[i])
@@ -53,6 +54,18 @@ func main() {
 	for i, k := range arr3 {
 		fmt.Println(i, k)
 	}
+
+	// 取array最大值
+	fmt.Println("------->")
+	maxi := -1
+	maxValue := -1
+	for i, v := range arr3 {
+		if v > maxValue {
+			maxi, maxValue = i, v
+		}
+	}
+
+	fmt.Println(maxi, maxValue)
 
 	fmt.Println("------->")
 	printArray2(arr1)
