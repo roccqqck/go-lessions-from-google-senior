@@ -12,8 +12,9 @@ func main() {
 
 	m2 := make(map[string]int) // m2 empty map
 	var m3 map[string]int      // m3 nil, go的nil可以參與運算
+	var m4 = make(map[string]int)
 
-	fmt.Println(m, m2, m3)
+	fmt.Println(m, m2, m3, m4)
 
 	fmt.Println("Traversing map ------------>")
 	for k, v := range m {
