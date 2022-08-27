@@ -12,7 +12,7 @@ func length0fNonRepeatingSubStr2(s string) int {
 	// []byte(s)  字串轉byte
 	for i, ch := range []byte(s) {
 		if lastI, ok := last0ccurred[ch]; ok && lastI >= start { // ok = true這個字出現過, 並且lastI >= start這個字位置>=start位置
-			start = lastI + 1 // start 往左移
+			start = lastI + 1 // start 往右移
 		} // ok = false這個字從未出現過, 或者 lastI < start這個字位置 < start位置  , start位置不變
 
 		if i-start+1 > maxLength {
