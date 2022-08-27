@@ -31,6 +31,7 @@ func main() {
 	swap2(&a, &b)
 	fmt.Println(a, b)
 
+	a, b = 3, 4
 	a, b = swap(a, b)
 	fmt.Println(a, b)
 }

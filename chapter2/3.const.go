@@ -30,11 +30,12 @@ func enums1() {
 	const (
 		cpp = iota // 自增值
 		java
-		python
+		python = "a"
 		_
-		golang
+		golang = iota
+		javascript
 	)
-	fmt.Println(cpp, java, python, golang)
+	fmt.Println(cpp, java, python, golang, javascript)
 }
 
 func enums2() {

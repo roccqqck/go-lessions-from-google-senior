@@ -10,6 +10,7 @@ func variableZeroValue() {
 	var s string
 
 	fmt.Println(a, s)
+	fmt.Printf("%d    %s\n", a, s)
 	fmt.Printf("%d    %q\n", a, s)
 }
 
@@ -25,6 +26,7 @@ func variableTypeDeduction1() {
 	var b, c = 11, 222
 	var s1 = "abc" +
 		"hahhaha"
+
 	fmt.Println(b, c, s1)
 	var i1, i2, b1, s2 = 11, 22, "def", false
 	fmt.Println(i1, i2, b1, s2)

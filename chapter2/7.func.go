@@ -125,5 +125,6 @@ func main() {
 
 	fmt.Println("------->")
 	fmt.Println(sum(1, 2, 3, 4))
+	fmt.Println(sum(1, 2, 3, 4, 0, 10))
 
 }

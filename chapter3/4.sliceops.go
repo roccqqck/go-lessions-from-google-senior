@@ -36,6 +36,14 @@ func main() {
 	s3 := make([]int, 10, 32) // slice len=10, cap=32
 	printSlice(s3)
 
+	fmt.Println("S4 ------->")
+	s4 := make([]int, 11) // slice len=10, cap=32
+	printSlice(s4)
+
+	fmt.Println("S5 ------->")
+	s5 := append(s4, 20)
+	printSlice(s5)
+
 	fmt.Println("Copying slice------->")
 	copy(s2, s1) // s1 copy進去 s2
 	printSlice(s2)
