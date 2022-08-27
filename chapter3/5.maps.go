@@ -21,9 +21,31 @@ func main() {
 		"quality": 4,
 	}
 
-	fmt.Println(m, m2, m3, m4, m5)
+	var m6 = map[int]string{
+		1: "ccmouse",
+		2: "golang",
+		3: "immoc",
+		4: "notbad",
+	}
 
-	fmt.Println("Traversing map ------------>")
+	fmt.Println(m, m2, m3, m4, m5, m6)
+
+	fmt.Println("Traversing map m------------>")
+	for k, v := range m {
+		fmt.Println(k, v) // map順序是隨機的
+	}
+
+	fmt.Println("------------>")
+	for k := range m {
+		fmt.Println(k)
+	}
+
+	fmt.Println("------------>")
+	for _, v := range m {
+		fmt.Println(v)
+	}
+
+	fmt.Println("Traversing map m5------------>")
 	for k, v := range m5 {
 		fmt.Println(k, v) // map順序是隨機的
 	}
@@ -35,6 +57,21 @@ func main() {
 
 	fmt.Println("------------>")
 	for _, v := range m5 {
+		fmt.Println(v)
+	}
+
+	fmt.Println("Traversing map m6------------>")
+	for k, v := range m6 {
+		fmt.Println(k, v) // map順序是隨機的
+	}
+
+	fmt.Println("------------>")
+	for k := range m6 {
+		fmt.Println(k)
+	}
+
+	fmt.Println("------------>")
+	for _, v := range m6 {
 		fmt.Println(v)
 	}
 
