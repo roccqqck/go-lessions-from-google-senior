@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+func swap3(a, b int) {
+	a, b = b, a
+}
+
 func swap2(a, b *int) {
 	*a, *b = *b, *a
 }
@@ -20,6 +24,9 @@ func main() {
 	fmt.Println(a)
 
 	a, b := 3, 4
+
+	swap3(a, b)
+	fmt.Println(a, b)
 
 	swap2(&a, &b)
 	fmt.Println(a, b)
