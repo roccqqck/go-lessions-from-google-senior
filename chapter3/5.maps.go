@@ -10,24 +10,31 @@ func main() {
 		"quality": "notbad",
 	}
 
-	m2 := make(map[string]int) // m2 empty map
+	m2 := make(map[string]int) // m2 make(map[string]int)是empty map , 不能宣告值
 	var m3 map[string]int      // m3 nil, go的nil可以參與運算
 	var m4 = make(map[string]int)
 
-	fmt.Println(m, m2, m3, m4)
+	var m5 = map[string]int{
+		"name":    1,
+		"course":  2,
+		"site":    3,
+		"quality": 4,
+	}
+
+	fmt.Println(m, m2, m3, m4, m5)
 
 	fmt.Println("Traversing map ------------>")
-	for k, v := range m {
+	for k, v := range m5 {
 		fmt.Println(k, v) // map順序是隨機的
 	}
 
 	fmt.Println("------------>")
-	for k := range m {
+	for k := range m5 {
 		fmt.Println(k)
 	}
 
 	fmt.Println("------------>")
-	for _, v := range m {
+	for _, v := range m5 {
 		fmt.Println(v)
 	}
 
@@ -51,10 +58,12 @@ func main() {
 	}
 
 	fmt.Println("Deleting Values------------>")
+	fmt.Println(m)
 	name, ok := m["name"]
 	fmt.Println(name, ok)
 
 	delete(m, "name")
 	name, ok = m["name"]
 	fmt.Println(name, ok)
+	fmt.Println(m)
 }
