@@ -31,7 +31,6 @@ func length0fNonRepeatingSubStr3(s string) int {
 	start := 0
 	maxLength := 0
 
-	// []byte(s)  字串轉byte
 	for i, ch := range s {
 		if lastI, ok := last0ccurred[ch]; ok && lastI >= start {
 			start = lastI + 1
