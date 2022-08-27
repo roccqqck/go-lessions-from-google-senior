@@ -64,6 +64,8 @@ func eval3(a, b int, op string) (int, error) {
 	}
 }
 
+// 輸入的op func(int, int) int 剛好要是輸入兩個int, return一個int
+// apply() int  是輸入一個func,輸入 a,b兩個int, return一個int
 func apply(op func(int, int) int, a, b int) int {
 	p := reflect.ValueOf(op).Pointer()    // 函數指針
 	opName := runtime.FuncForPC(p).Name() // 函數名
