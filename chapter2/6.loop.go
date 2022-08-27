@@ -21,9 +21,9 @@ func sum0To99() int {
 // int -> 2進位
 func convertToBin(n int) string {
 	result := ""
-	for ; n > 0; n /= 2 {
+	for ; n > 0; n /= 2 { // while n>0 == true
 		lsb := n % 2
-		result = strconv.Itoa(lsb) + result
+		result = strconv.Itoa(lsb) + result // strconv.Itoa()  數字轉字串
 	}
 	return result
 
@@ -39,8 +39,8 @@ func printFile(filename string) {
 }
 
 func printFileContents(reader io.Reader) {
-	scanner := bufio.NewScanner(reader)
-	for scanner.Scan() { // while
+	scanner := bufio.NewScanner(reader) // bufio.NewScanner()逐行讀取,    ioutil.ReadFile()全部讀取
+	for scanner.Scan() {                // while   , Scan()在讀到一行時返回true，沒讀到返回false
 		fmt.Println(scanner.Text())
 	}
 }
