@@ -35,7 +35,7 @@ git clone https://github.com/fullstorydev/grpcurl
 cd grpcurl
 GOOS=windows GOARCH=amd64 go build github.com/fullstorydev/grpcurl/cmd/grpcurl
 
-ls
+ls ~/go/bin/windows_amd64
 ```
 ```
 grpcurl.exe
